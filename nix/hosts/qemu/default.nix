@@ -14,8 +14,8 @@
     WLR_NO_HARDWARE_CURSORS = "1";
   };
 
-  #users.users.maxime.extraGroups = [ "vboxsf" ];
+#  users.users.maxime.extraGroups = [ "vboxsf" ];
 
   # Requires rebuild of VirtualBox, which is unlikely to be used.
-  #virtualisation.virtualbox.host.enableExtensionPack = lib.mkForce false;
+ # virtualisation.virtualbox.host.enableExtensionPack = lib.mkForce false;
 }

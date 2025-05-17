@@ -3,7 +3,7 @@
 {
   packages = with pkgs; [
     amazon-ecr-credential-helper
-    android-tools
+    #android-tools
     argocd
     aws-vault
     awscli2
@@ -30,12 +30,12 @@
     go-jsonnet
     unstable.golangci-lint
     golangci-lint-langserver
-    (google-cloud-sdk.withExtraComponents [
-      google-cloud-sdk.components.gke-gcloud-auth-plugin
-    ])
-    (unstable.gopls.override {
-      buildGoModule = unstable.buildGo124Module;
-    })
+    # (google-cloud-sdk.withExtraComponents [
+    #   google-cloud-sdk.components.gke-gcloud-auth-plugin
+    # ])
+    # (unstable.gopls.override {
+    #   buildGoModule = unstable.buildGo124Module;
+    # })
     goreleaser
     grpcurl
     hadolint
@@ -62,7 +62,7 @@
     ])
     kubelogin
     unstable.kubelogin-oidc
-    kubernetes-helm
+    # kubernetes-helm
     kustomize
     lazygit
     lua-language-server

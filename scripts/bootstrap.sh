@@ -59,11 +59,11 @@ nixos-install --verbose --no-root-passwd --root "${MOUNTPOINT}" --flake ".#${HOS
 
 nixos-enter --root "${MOUNTPOINT}" -- bash -e <<EOF
   echo '>>> Re-configuring NixOS configuration for user...'
-  chown -R maxime:users /etc/nixos
-  git --git-dir=/etc/nixos/.git remote set-url origin git@github.com:maxbrunet/dotfiles.git
+  chown -R manu:users /etc/nixos
+  git --git-dir=/etc/nixos/.git remote set-url origin git@github.com:emmanuelvargas/nixosdotfiles.git
 
   echo '>>> Setting user password...'
-  chpasswd <<< 'maxime:${PASSWORD}'
+  chpasswd <<< 'manu:${PASSWORD}'
 EOF
 
 echo '>>> All done! Ready to reboot.'

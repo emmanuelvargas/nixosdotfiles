@@ -126,7 +126,7 @@
         {
           home-manager.useGlobalPkgs = true;
           home-manager.useUserPackages = false;
-          home-manager.users.maxime = import ./nix/home.nix;
+          home-manager.users.manu = import ./nix/home.nix;
           home-manager.extraSpecialArgs = attrs;
         }
       ];
@@ -152,6 +152,12 @@
           system = "x86_64-linux";
           modules = baseModules ++ [
             ./nix/hosts/virtualbox
+          ];
+        };
+        qemu = nixos.lib.nixosSystem {
+          system = "x86_64-linux";
+          modules = baseModules ++ [
+            ./nix/hosts/qemu
           ];
         };
       };

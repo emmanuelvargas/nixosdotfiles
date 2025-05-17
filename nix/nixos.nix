@@ -83,10 +83,10 @@ in
       file
       librewolf
       gcc
-      gimp
+      #gimp
       gnome-calculator
       gnumake
-      libreoffice
+      #libreoffice
       libsecret
       lsof
       mate.engrampa
@@ -98,7 +98,7 @@ in
       pulseaudio
       simple-scan
       system-config-printer
-      thunderbird
+      #thunderbird
       traceroute
       unzip
       vlc
@@ -180,7 +180,7 @@ in
   nix.gc = {
     automatic = true;
     dates = "weekly";
-    options = "--delete-older-than 30d";
+    options = "--delete-older-than 7d";
   };
   nix.optimise.automatic = true;
   nix.settings.experimental-features = [
@@ -246,8 +246,8 @@ in
     '';
   };
 
-  programs.wireshark.enable = true;
-  programs.wireshark.package = pkgs.wireshark;
+  # programs.wireshark.enable = true;
+  # programs.wireshark.package = pkgs.wireshark;
 
   programs.xwayland.enable = false;
 
@@ -310,7 +310,7 @@ in
     Delegate = [ "cpuset" ];
   };
 
-  users.users.maxime = {
+  users.users.manu = {
     isNormalUser = true;
     extraGroups = [
       "input"
@@ -372,10 +372,10 @@ in
   xdg.portal.enable = true;
   xdg.portal.wlr.enable = true;
 
-  zramSwap.enable = true;
-  # 50% RAM, capped at 4 GiB
-  zramSwap.memoryMax = 4294967296;
-  zramSwap.memoryPercent = 50;
+  # zramSwap.enable = true;
+  # # 50% RAM, capped at 4 GiB
+  # zramSwap.memoryMax = 4294967296;
+  # zramSwap.memoryPercent = 50;
 
   # This value determines the NixOS release from which the default
   # settings for stateful data, like file locations and database versions

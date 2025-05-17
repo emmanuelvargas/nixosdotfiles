@@ -23,7 +23,7 @@ My dotfiles collection for a flawless workflow. Starring `zsh`, `nvim`, `tmux`, 
    ```shell
    sudo -i
    nix-env -iA nixos.git
-   git clone https://github.com/maxbrunet/dotfiles.git
+   git clone https://github.com/emmanuelvargas/nixosdotfiles.git
    cd dotfiles
    ./scripts/bootstrap.sh <HOSTNAME>
    reboot
@@ -58,9 +58,9 @@ My dotfiles collection for a flawless workflow. Starring `zsh`, `nvim`, `tmux`, 
 
    ```shell
    mkdir -p ~/.config
-   git clone https://github.com/maxbrunet/dotfiles.git ~/.config/darwin
+   git clone https://github.com/emmanuelvargas/nixosdotfiles.git ~/.config/darwin
    cd ~/.config/darwin
-   git remote set-url origin git@github.com:maxbrunet/dotfiles.git
+   git remote set-url origin git@github.com:emmanuelvargas/nixosdotfiles.git
    ```
 
 3. Prepare system for `nix-darwin`:
